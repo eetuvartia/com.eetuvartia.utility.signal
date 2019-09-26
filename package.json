@@ -1,8 +1,8 @@
 {
   "name": "com.eetuvartia.utility.signal",
   "displayName": "Signal Framework",
-  "version": "1.0.0",
-  "unity" : "2019.3",
+  "version": "1.0.1",
+  "unity": "2019.3",
   "description": "Messaging framework to do event based communication",
   "main": "index.js",
   "repository": {
