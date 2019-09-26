@@ -1,0 +1,23 @@
+{
+  "name": "com.eetuvartia.utility.signal",
+  "displayName": "Signal Framework",
+  "version": "1.0.0",
+  "unity" : "2019.3",
+  "description": "Messaging framework to do event based communication",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eetuvartia/com.eetuvartia.utility.signal.git"
+  },
+  "keywords": [
+    "signal",
+    "event",
+    "messaging",
+    "unity"
+  ],
+  "author": "Eetu Vartia",
+  "bugs": {
+    "url": "https://github.com/eetuvartia/com.eetuvartia.utility.signal/issues"
+  },
+  "homepage": "https://github.com/eetuvartia/com.eetuvartia.utility.signal#readme"
+}
