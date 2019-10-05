@@ -1,4 +1,4 @@
-namespace Utility.Signals {
+namespace com.eetuvartia.utility.signalframework.Signals {
 
 	public interface ISignal<TSignalType>
 		where TSignalType : struct, ISignalType {

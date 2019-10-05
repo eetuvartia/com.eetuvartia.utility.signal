@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 
-namespace Utility.Signals {
+namespace com.eetuvartia.utility.signalframework.Signals {
 
 	public class Signal<TSignalType> : ISignal<TSignalType> where TSignalType : struct, ISignalType {
 
-		protected Signal() {
+		internal Signal() {
 			Listener   = new SignalListener<TSignalType>(this);
 			Dispatcher = new SignalDispatcher<TSignalType>(this);
 		}
