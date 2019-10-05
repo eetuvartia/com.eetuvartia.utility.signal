@@ -5,7 +5,7 @@ namespace Utility.Signals {
 
 	public class Signal<TSignalType> : ISignal<TSignalType> where TSignalType : struct, ISignalType {
 
-		protected Signal() {
+		internal Signal() {
 			Listener   = new SignalListener<TSignalType>(this);
 			Dispatcher = new SignalDispatcher<TSignalType>(this);
 		}
