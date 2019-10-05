@@ -1,4 +1,4 @@
-namespace Utility.Signals {
+namespace com.eetuvartia.utility.signalframework.Signals {
 
 	internal class SignalDispatcher<TSignalType> :
 		ISignalDispatcher<TSignalType>

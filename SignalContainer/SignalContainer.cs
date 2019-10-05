@@ -1,28 +1,32 @@
 using System;
 using System.Collections.Generic;
-using Utility.Signals;
+using com.eetuvartia.utility.signalframework.Signals;
 
-public class SignalContainer {
+namespace com.eetuvartia.utility.signalframework.SignalContainer {
 
-	private readonly Dictionary<Type, object> signals;
+	public class SignalContainer {
 
-	public SignalContainer() {
-		signals = new Dictionary<Type, object>();
-	}
+		private readonly Dictionary<Type, object> signals;
 
-	private Signal<TSignalParams> GetSignal<TSignalParams>() where TSignalParams : struct, ISignalType {
-		if (!signals.TryGetValue(typeof(TSignalParams), out var signal)) {
-			signals.Add(typeof(TSignalParams), signal = new Signal<TSignalParams>());
+		public SignalContainer() {
+			signals = new Dictionary<Type, object>();
 		}
-		return (Signal<TSignalParams>)signal;
-	}
 
-	public ISignalListener<TSignalParams> GetListener<TSignalParams>() where TSignalParams : struct, ISignalType {
-		return GetSignal<TSignalParams>().Listener;
-	}
+		private Signal<TSignalParams> GetSignal<TSignalParams>() where TSignalParams : struct, ISignalType {
+			if (!signals.TryGetValue(typeof(TSignalParams), out var signal)) {
+				signals.Add(typeof(TSignalParams), signal = new Signal<TSignalParams>());
+			}
+			return (Signal<TSignalParams>)signal;
+		}
 
-	public ISignalDispatcher<TSignalParams> GetDispatcher<TSignalParams>() where TSignalParams : struct, ISignalType {
-		return GetSignal<TSignalParams>().Dispatcher;
+		public ISignalListener<TSignalParams> GetListener<TSignalParams>() where TSignalParams : struct, ISignalType {
+			return GetSignal<TSignalParams>().Listener;
+		}
+
+		public ISignalDispatcher<TSignalParams> GetDispatcher<TSignalParams>() where TSignalParams : struct, ISignalType {
+			return GetSignal<TSignalParams>().Dispatcher;
+		}
+
 	}
 
 }

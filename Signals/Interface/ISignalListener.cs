@@ -1,6 +1,6 @@
 using System;
 
-namespace Utility.Signals {
+namespace com.eetuvartia.utility.signalframework.Signals {
 
 	public interface ISignalListener<TSignalType>
 		where TSignalType : struct, ISignalType {
